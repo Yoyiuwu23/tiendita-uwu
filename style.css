@@ -1,0 +1,105 @@
+html, body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ede4f7 0%, #e6d6f3 100%);
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Carrusel */
+.carousel {
+    background: rgba(255,255,255,0.7);
+    border-radius: 1.5rem;
+}
+
+.carousel-item img {
+    max-height: 60vh;
+    object-fit: contain;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+.carousel-item img:hover {
+    box-shadow: 0 8px 32px rgba(100, 50, 150, 0.2);
+}
+
+/* Modal personalizado y responsive */
+.modal-content-custom {
+    background: rgba(30, 0, 50, 0.6);
+    border: none;
+    box-shadow: none;
+}
+
+.modal-image {
+    max-width: 95vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 8px 32px rgba(100, 50, 150, 0.2);
+    display: block;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+/* Botón Instagram en el modal */
+.btn-instagram:hover {
+    background: #C13584 !important;
+}
+.btn-instagram:hover i {
+    color: #fff !important;
+}
+
+/* Sección cómo trabajamos */
+.como-trabajamos {
+    background: linear-gradient(45deg, #7961a5 0%, #b7acc2 100%);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(100, 50, 150, 0.07);
+}
+
+.como-trabajamos h2,
+.como-trabajamos h4 {
+    color: #5e35b1;
+}
+
+/* Métodos de pago */
+.metodos-pago img {
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.metodos-pago img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive para modal en móviles */
+@media (max-width: 700px) {
+    .modal-image {
+        max-width: 98vw;
+        max-height: 70vh;
+    }
+    .modal-dialog.modal-lg {
+        max-width: 98vw;
+        margin: 0;
+    }
+    .modal-content-custom {
+        border-radius: 0.5rem;
+    }
+}
