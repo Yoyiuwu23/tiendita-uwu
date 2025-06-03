@@ -39,4 +39,18 @@ document.addEventListener('DOMContentLoaded', function () {
             bsModal.hide();
         }
     });
+
+    // Animación de aparición al hacer scroll (Intersection Observer)
+    const secciones = document.querySelectorAll('.scroll-section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, { threshold: 0.4 });
+
+    secciones.forEach(seccion => observer.observe(seccion));
 });
