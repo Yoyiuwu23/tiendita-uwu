@@ -1,3 +1,17 @@
+// Banner que desaparece al bajar y aparece al subir
+let lastScroll = 0;
+const banner = document.getElementById('banner');
+
+window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScroll && currentScroll > 60) {
+        banner.classList.add('hide');
+    } else {
+        banner.classList.remove('hide');
+    }
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+});
+
 // Array de imágenes y sus links de Instagram
 const imagenes = [
     {
@@ -18,12 +32,11 @@ const imagenes = [
 function showImage(idx) {
     document.getElementById('expandedImage').src = imagenes[idx].src;
     document.getElementById('instagramLink').href = imagenes[idx].insta;
-    // Abre el modal (por si no se abre solo)
     const modal = new bootstrap.Modal(document.getElementById('imageModal'));
     modal.show();
 }
 
-// Inicializar tooltips y cerrar modal al hacer clic fuera
+// Tooltips y modal
 document.addEventListener('DOMContentLoaded', function () {
     // Tooltips Bootstrap
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -53,4 +66,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.4 });
 
     secciones.forEach(seccion => observer.observe(seccion));
+
+    // Menú de contacto flotante
+    const btnContacto = document.getElementById('btn-contacto');
+    const menuContacto = document.getElementById('menu-contacto');
+
+    btnContacto.addEventListener('click', function(e) {
+        menuContacto.classList.toggle('show');
+        e.stopPropagation();
+    });
+
+    // Cerrar menú si se hace clic fuera
+    document.addEventListener('click', function(e) {
+        if (menuContacto.classList.contains('show')) {
+            menuContacto.classList.remove('show');
+        }
+    });
+
+    // Evitar que el menú se cierre al hacer clic adentro
+    menuContacto.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
 });
