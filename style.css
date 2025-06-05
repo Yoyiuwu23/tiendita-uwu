@@ -18,7 +18,7 @@ footer {
     margin-top: auto;
 }
 
-/* Banner fijo arriba */
+/* Banner fijo */
 .banner-fijo {
     position: fixed;
     top: 0;
@@ -38,7 +38,7 @@ footer {
     top: -80px;
 }
 
-/* Secciones de pantalla completa y animaciones */
+/* Galería animada */
 .scroll-section {
     min-height: 100vh;
     opacity: 0;
@@ -67,7 +67,7 @@ footer {
     transform: translateX(0);
 }
 
-/* Modal personalizado y responsive */
+/* Modal personalizado */
 .modal-content-custom {
     background: rgba(30, 0, 50, 0.6);
     border: none;
@@ -87,24 +87,13 @@ footer {
 .modal-body {
     padding: 0;
 }
+
 /* Botón Instagram en el modal */
 .btn-instagram:hover {
     background: #C13584 !important;
 }
 .btn-instagram:hover i {
     color: #fff !important;
-}
-
-/* Sección cómo trabajamos y contacto */
-.como-trabajamos {
-    background: linear-gradient(45deg, #d1c4e9 0%, #ede4f7 100%);
-    border-radius: 1.5rem;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(100, 50, 150, 0.07);
-}
-.como-trabajamos h2,
-.como-trabajamos h4 {
-    color: #5e35b1;
 }
 
 /* Métodos de pago */
@@ -127,7 +116,6 @@ footer {
     flex-direction: column;
     align-items: flex-end;
 }
-
 .btn-contacto-flotante {
     background: #9f79e6;
     color: #fff;
@@ -143,7 +131,17 @@ footer {
     background: #7e57c2;
     color: #fff;
 }
-
+.menu-contacto {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(80,0,120,0.12);
+    margin-bottom: 12px;
+    padding: 0.5rem 0.7rem;
+    min-width: 180px;
+    animation: fadeInContacto 0.3s;
+}
 .menu-contacto {
     display: none;
     flex-direction: column;
@@ -172,15 +170,16 @@ footer {
     color: #4a148c;
 }
 .menu-contacto.show {
-    display: flex;
+    display: flex !important;
 }
+
 
 @keyframes fadeInContacto {
     from { opacity: 0; transform: translateY(20px);}
     to { opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive para contacto flotante */
+/* Responsive para móviles */
 @media (max-width: 700px) {
     .contacto-flotante {
         bottom: 18px;
@@ -194,5 +193,16 @@ footer {
     .menu-contacto {
         min-width: 140px;
         font-size: 0.97rem;
+    }
+    .modal-image {
+        max-width: 98vw;
+        max-height: 70vh;
+    }
+    .modal-dialog.modal-lg {
+        max-width: 98vw;
+        margin: 0;
+    }
+    .modal-content-custom {
+        border-radius: 0.5rem;
     }
 }

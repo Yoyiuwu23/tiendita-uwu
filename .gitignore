@@ -1,0 +1,30 @@
+# Ignorar solo la carpeta 'sitio web' dentro de images/productos
+/images/productos/sitio web/
+
+# Archivos de sistema y editores
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Dependencias
+node_modules/
+bower_components/
+
+# Archivos temporales y de logs
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Archivos de pruebas o backups
+*.test.*
+*.spec.*
+*.old
+*.cache
+.cache/
