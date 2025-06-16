@@ -1,37 +1,37 @@
 // Array de imágenes y sus links de Instagram (y preparados para TikTok y X/Twitter)
 const imagenes = [
   {
-    src: "images/productos/dibujito-todo-bonito-1.jpg",
-    insta: "https://www.instagram.com/p/DKWKBFHNSZD/",
+    src: "images/productos/bts-festa.png",
+    //insta: "",
     // tiktok: "",
     // twitter: ""
   },
   {
-    src: "images/productos/dibujito-todo-bonito-2.jpg",
-    insta: "https://www.instagram.com/p/DH3VrIFveem/",
+    src: "images/productos/bts-festa.png",
+    //insta: "",
     // tiktok: "",
     // twitter: ""
   },
   {
-    src: "images/productos/dibujito-todo-bonito-3.jpg",
-    insta: "https://www.instagram.com/p/DHvnURkPmJ3/",
+    src: "images/productos/bts-festa.png",
+    //insta: "",
     // tiktok: "",
     // twitter: ""
   },
 ];
 
 // Mostrar imagen e ícono de Instagram en el modal (y preparados para TikTok/X)
-function showImage(idx) {
-  document.getElementById("expandedImage").src = imagenes[idx].src;
-  document.getElementById("instagramLink").href = imagenes[idx].insta;
+//function showImage(idx) {
+//  document.getElementById("expandedImage").src = imagenes[idx].src;
+//  document.getElementById("instagramLink").href = imagenes[idx].insta;
 
   // Preparado para futuro:
   // document.getElementById('tiktokLink').href = imagenes[idx].tiktok || "#";
   // document.getElementById('twitterLink').href = imagenes[idx].twitter || "#";
 
-  const modal = new bootstrap.Modal(document.getElementById("imageModal"));
-  modal.show();
-}
+//  const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+//  modal.show();
+//}
 
 // Inicializar tooltips y cerrar modal al hacer clic fuera
 document.addEventListener("DOMContentLoaded", function () {
